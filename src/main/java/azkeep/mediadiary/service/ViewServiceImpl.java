@@ -1,6 +1,6 @@
 package azkeep.mediadiary.service;
 
-import azkeep.mediadiary.dto.MediaRecordDto;
+import azkeep.mediadiary.dto.MediaSelectedDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -8,7 +8,13 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class ViewServiceImpl implements ViewService {
     @Override
-    public MediaRecordDto getRecent() {
+    public MediaSelectedDto getRecent() {
+        MediaSelectedDto dto = new MediaSelectedDto();
+        var result = dto.map(m -> MediaSelectedDto.builder()
+                .id(m.getId()
+                )
+
+        );
         return null;
     }
 }

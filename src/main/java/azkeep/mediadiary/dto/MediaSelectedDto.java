@@ -2,6 +2,7 @@ package azkeep.mediadiary.dto;
 
 import lombok.*;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @Getter
@@ -9,10 +10,10 @@ import java.util.Date;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class MediaRecordDto {
+public class MediaSelectedDto {
     private Long id;
     private String title;
-    private Date date;
+    private LocalDate date;
     private Boolean isFinished;
     private String type;
     private String genre;
