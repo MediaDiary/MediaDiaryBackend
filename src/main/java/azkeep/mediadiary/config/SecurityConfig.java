@@ -20,9 +20,13 @@ public class SecurityConfig {
                 .authorizeHttpRequests(req -> {
                     req.requestMatchers(
                         "/",
-                        "/view/recent",
+                        "/api/entries/all",
+                        "/api/entries/{days}",
+                        "/api/entries/date/{date}",
+                        "/ui/recent",
                         "/auth/google",
                         "/auth/google/callback",
+                        "/error",
                         "/images/**",
                         "/css/**")
                         .permitAll();

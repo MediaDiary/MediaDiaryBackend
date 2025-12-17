@@ -23,16 +23,16 @@ public class MediaSelected {
     private String title;
 
     @ColumnDefault("now()")
-    @Column(name = "date", nullable = false)
+    @Column(name = "date_selected", nullable = false)
     private LocalDate date;
 
     @ColumnDefault("false")
     @Column(name = "is_finished", nullable = false)
     private Boolean isFinished = false;
 
-    @Column(name = "type", length = 20)
+    @Column(name = "type_selected", length = 20)
     private String type;
 
-    @Column(name = "genre", length = 20)
+    @Column(name = "genre_selected", length = 20)
     private String genre;
 }
